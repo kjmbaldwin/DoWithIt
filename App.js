@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import WelcomeScreen from './screens/WelcomeScreen';
+import { WelcomeScreen }  from './screens';
 
 export default function App() {
   return (

@@ -3,7 +3,7 @@ import { ImageBackground, View, StyleSheet } from 'react-native';
 
 const bgImage = require('../assets/background.jpg')
 
-class WelcomeScreen extends Component {
+export class WelcomeScreen extends Component {
   render() {
     return(
       <View style={styles.container}>
@@ -26,5 +26,3 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   }
 });
-
-export default WelcomeScreen;
