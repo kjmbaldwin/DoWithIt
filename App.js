@@ -1,28 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {Image, StyleSheet, Text, SafeAreaView, TouchableWithoutFeedback} from 'react-native';
+import { View } from 'react-native';
+import WelcomeScreen from './screens/WelcomeScreen';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Hello React Native!</Text>
-      <Image source={require('./assets/icon.png')} />
-      <TouchableWithoutFeedback>
-        <Image source={{
-          width: 200,
-          height: 300,
-          uri: 'https://picsum.photos/200/300'}} />
-      </TouchableWithoutFeedback>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+    <View
+      style={{
+        backgroundColor: "#fff",
+        flex: 1,
+        flexDirection: "column",
+      }}
+    >
+      <WelcomeScreen/>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
