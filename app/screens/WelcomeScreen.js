@@ -3,7 +3,7 @@ import { ImageBackground, View, StyleSheet, Image, Text } from 'react-native';
 
 const bgImage = require('../assets/background.jpg')
 
-function WelcomeScreen() {
+const WelcomeScreen = () => {
   return(
     <ImageBackground
       style={styles.bg}
