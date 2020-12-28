@@ -1,45 +1,49 @@
-import React, { Component } from 'react';
-import { ImageBackground, View, StyleSheet, Image } from 'react-native';
+import React from 'react';
+import { ImageBackground, View, StyleSheet, Image, Text } from 'react-native';
 
 const bgImage = require('../assets/background.jpg')
 
-export class WelcomeScreen extends Component {
-  render() {
-    return(
-      <View style={styles.container}>
-        <ImageBackground
-          style={styles.bg}
-          source={bgImage}/>
-        <Image
-          style={styles.image}
-          source={require('../assets/logo-red.png')}>
-        </Image>
-        <View style={styles.button1}/>
-        <View style={styles.button2}/>
+function WelcomeScreen() {
+  return(
+    <ImageBackground
+      style={styles.bg}
+      source={bgImage}
+    >
+      <View style={styles.logoContainer}>
+        <Image style={styles.logo} source={require('../assets/logo-red.png')}/>
+        <Text>Sell What You Don't Need</Text>
       </View>
-    );
-  }
+      <View style={styles.loginButton}></View>
+      <View style={styles.registerButton}></View>
+    </ImageBackground>
+);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column"
-  },
   bg: {
     flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center"
+    justifyContent: "flex-end",
+    alignItems: 'center'
   },
-  image: {
+  logoContainer: {
+    position: 'absolute',
+    top: 70,
+    alignItems: 'center'
+  },
+  logo: {
     width: 100,
+    height: 100,
   },
-  button1: {
-    height: 80,
+  loginButton: {
+    width: '100%',
+    height: 70,
     backgroundColor: '#fc5c65'
   },
-  button2: {
-    height: 80,
+  registerButton: {
+    width: '100%',
+    height: 70,
     backgroundColor: '#4ECDC4'
   }
 });
+
+export default WelcomeScreen;
