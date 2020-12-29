@@ -10,7 +10,6 @@ const AppText = ({children, style}) => {
 
 const s = StyleSheet.create({
   text: {
-    color: 'tomato',
     ...Platform.select({
       ios: {
         fontSize: 20,
